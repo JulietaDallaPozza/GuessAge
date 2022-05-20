@@ -18,7 +18,6 @@ function App() {
     const getAge = () => {
         Axios.get(`https://api.agify.io?name=${name}`)
             .then((response) => {
-                console.log('response:', response)
                 setAge(response.data.age)
                 setError('')
             })
